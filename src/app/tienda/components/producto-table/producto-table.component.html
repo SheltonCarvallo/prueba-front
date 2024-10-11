@@ -1,0 +1,27 @@
+<dir *ngIf="producto === null; else table" class="alert alert-warning warning text-center">
+    there isn't any product to show
+</dir>
+
+<ng-template #table>
+    <table class="table table-hove">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>producto nombre</th>
+                <th>descripcion</th>
+                <th>precio</th>
+                <th>estado</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{producto?.id}}</td>
+                <td>{{producto?.name}}</td>
+                <td>{{producto?.description}}</td>
+                <td>{{producto?.price}}</td>
+                <td>{{producto?.estado}}</td>
+            </tr>
+        </tbody>
+    </table>
+</ng-template>
